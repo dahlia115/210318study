@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="171.0" prefWidth="290.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/15.0.1" fx:controller="ex01.member.MemberController">
+   <children>
+      <Label layoutX="31.0" layoutY="32.0" prefHeight="14.0" prefWidth="46.0" text="성별">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="16.0" layoutY="90.0" prefHeight="18.0" prefWidth="62.0" text="연령구분">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="31.0" layoutY="60.0" prefHeight="14.0" prefWidth="46.0" text="취미">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Button layoutX="54.0" layoutY="122.0" mnemonicParsing="false" onAction="#memberProc" prefHeight="34.0" prefWidth="58.0" text="확인" />
+      <RadioButton fx:id="rdoWoman" layoutX="77.0" layoutY="33.0" mnemonicParsing="false" selected="true" text="여성">
+         <toggleGroup>
+            <ToggleGroup fx:id="gender" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="rdoMan" layoutX="143.0" layoutY="33.0" mnemonicParsing="false" text="남성" toggleGroup="$gender" />
+      <CheckBox fx:id="chkMusic" layoutX="77.0" layoutY="61.0" mnemonicParsing="false" text="음악" />
+      <CheckBox fx:id="chkSport" layoutX="142.0" layoutY="61.0" mnemonicParsing="false" text="스포츠" />
+      <CheckBox fx:id="chkMovie" layoutX="221.0" layoutY="61.0" mnemonicParsing="false" text="영화" />
+      <ComboBox fx:id="cmbAge" layoutX="84.0" layoutY="88.0" prefHeight="22.0" prefWidth="127.0" promptText="연령대 선택" />
+      <Button layoutX="180.0" layoutY="122.0" mnemonicParsing="false" onAction="#cancelProc" prefHeight="33.0" prefWidth="58.0" text="취소" />
+   </children>
+</AnchorPane>
